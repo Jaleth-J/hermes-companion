@@ -1,0 +1,19 @@
+{
+  "name": "Default Sprite Theme",
+  "version": "1.0.0",
+  "author": "Hermes Companion",
+  "description": "Default sprite theme with 6 emotional states",
+  "states": {
+    "idle": "idle.json",
+    "listening": "listening.json",
+    "thinking": "thinking.json",
+    "happy": "happy.json",
+    "worried": "worried.json",
+    "error": "error.json"
+  },
+  "settings": {
+    "animation_speed": 1.0,
+    "loop": true,
+    "background": "transparent"
+  }
+}
