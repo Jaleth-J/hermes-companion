@@ -1,0 +1,54 @@
+{
+  "$schema": "https://tauri.app/v2/manifest.json",
+  "productName": "Hermes Companion",
+  "version": "0.0.0",
+  "identifier": "com.jaleth.hermes-companion",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:5173",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "label": "main",
+        "title": "Hermes Companion",
+        "width": 1200,
+        "height": 800,
+        "minWidth": 800,
+        "minHeight": 600,
+        "resizable": true,
+        "fullscreen": false,
+        "decorations": true,
+        "transparent": false,
+        "center": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "category": "Productivity",
+    "shortDescription": "Your Personal AI Companion",
+    "longDescription": "Hermes Companion is a visual AI assistant with expressive sprites, cross-platform support, and one-click API setup.",
+    "copyright": "MIT License",
+    "resources": []
+  },
+  "plugins": {
+    "store": {
+      "path": "store.json"
+    }
+  }
+}
