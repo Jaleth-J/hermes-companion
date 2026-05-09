@@ -115,6 +115,12 @@ fn remove_oauth_connection(
     Ok(creds.len() < initial_len)
 }
 
+/// Ping command for IPC connection testing
+#[tauri::command]
+fn ping(message: String) -> Result<String, String> {
+    Ok(format!("Pong! Received: {}. Backend is alive! 🚀", message))
+}
+
 fn main() {
     tauri::Builder::default()
         .manage(AppState::default())
@@ -122,7 +128,8 @@ fn main() {
             start_github_oauth,
             handle_github_callback,
             get_oauth_connections,
-            remove_oauth_connection
+            remove_oauth_connection,
+            ping
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
